@@ -22,7 +22,7 @@ function ExercisesList() {
     //to get all the exercises saved in MongoDB and render them
     useEffect(() => {
 
-        axios.get('http://localhost:5000/exercises/')
+        axios.get('https://mern-exercise-tracker-backend-wxdr.onrender.com/exercises/')
             .then(response => {
                 setExercises(response.data);
             })
@@ -35,12 +35,12 @@ function ExercisesList() {
 
     //function to delete post by sending axios delete request to backend Express server
     function DeletePost(exercise_id){
-        axios.delete(`http://localhost:5000/exercises/${exercise_id}`)
+        axios.delete(`https://mern-exercise-tracker-backend-wxdr.onrender.com/exercises/${exercise_id}`)
             .then(response => {
                 console.log(response);
 
                 //to get new list of exercises after deleting an exercise
-                axios.get('http://localhost:5000/exercises/')
+                axios.get('https://mern-exercise-tracker-backend-wxdr.onrender.com/exercises/')
                     .then(response => {
                         setExercises(response.data);
                     })
