@@ -13,8 +13,15 @@ const app = express();
 //sets the port number that your Express app will listen on. It checks if there's a PORT environment variable defined, and if not, it defaults to port 5000.
 const port = process.env.PORT || 5000;
 
+const corsOptions = {
+    //https://mern-exercise-tracker-five.vercel.app
+    origin: 'https://mern-exercise-tracker-wxdr.onrender.com', // Your frontend URL
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  };
+  
 //tells express app to use cors middleware and the built-in express.json() middleware
-app.use(cors());
+app.use(cors(corsOptions));
+
 app.use(express.json());
 //"middleware" are functions executed in between receiving an incoming HTTP request 
 //and sending the response. These functions can modify the request or response, 
