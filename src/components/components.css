@@ -1,0 +1,26 @@
+.custom {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.custom .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important; /* Ensure the navigation items are displayed in a row */
+    justify-content: center !important; /* Center the navigation items horizontally */
+}
+
+.exercise-list-div{
+    opacity: 90%;
+}
+
+.form-control{
+    opacity: 60%;
+}
+
+.create-exercise-div,.create-user-div{
+    color: cyan;
+}
+
+.display-btn{
+    margin-right: 5px;
+}
