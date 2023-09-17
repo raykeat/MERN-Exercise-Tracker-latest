@@ -63,7 +63,7 @@ export default class CreateUser extends Component {
             newusercreated:true
         })
 
-        axios.post('https://mern-exercise-tracker-backend-wxdr.onrender.com/users/add', user)
+        axios.post('https://mern-exercise-tracker-backend.onrender.com/users/add', user)
             .then(res => console.log(res.data));
     }
 

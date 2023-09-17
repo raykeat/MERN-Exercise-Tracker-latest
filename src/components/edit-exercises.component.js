@@ -82,7 +82,7 @@ function EditExercise () {
         console.log(exercise);
 
         //making axios post request to backend EXPRESS endpoints/routes, which then performs CRUD operations in MongoDB
-        axios.post(`https://mern-exercise-tracker-backend-wxdr.onrender.com/exercises/update/${exercise.exerciseid}`,exercise)
+        axios.post(`https://mern-exercise-tracker-backend.onrender.com/exercises/update/${exercise.exerciseid}`,exercise)
             .then(res => {
                 console.log(res.data);
                 setEdited(true);
